@@ -1,5 +1,9 @@
-import { Student, Trainer, Course, Assignment, Subject } from './index.js';
 import DATA from '../config/DATA.js';
+import Student from './Student.js';
+import Trainer from './Trainer.js';
+import Course from './Course.js';
+import Assignment from './Assignment.js';
+import Subject from './Subject.js';
 
 const schoolOptions = {
   courses: [],
