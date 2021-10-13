@@ -8,8 +8,8 @@ export default class Course extends UtilClass {
     this.title = params.title;
     this.type = params.type;
     this.stream = params.stream;
-    this.starts = new Date();
-    this.ends = null;
+    this.starts = params.starts ?? new Date();
+    this.ends = params.starts ?? null;
     this.students = params.students ?? [];
     this.trainers = params.trainers ?? [];
     this.assignments = params.assignments ?? [];
