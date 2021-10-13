@@ -122,23 +122,23 @@ export default {
   ],
   assignments: [
     {
-      title: 'Private School frontend',
+      title: 'Private School Frontend',
       description: 'Implement 5 pages of the private school',
     },
     {
-      title: 'Private School backend',
+      title: 'Private School Backend',
       description: 'Implement 5 pages of the private school',
     },
     {
-      title: 'Private School database',
+      title: 'Private School Database',
       description: 'Implement DML and DDL of private school',
     },
     {
-      title: 'Hotel rental page',
+      title: 'Hotel Rental Webpage',
       description: 'Implement landing page of a rental website',
     },
     {
-      title: 'Group project',
+      title: 'Group Project',
       description: 'Implement an ecommerce solution',
     },
   ],
