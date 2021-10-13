@@ -1,6 +1,5 @@
 import { v4 as uuid } from 'uuid';
 import UtilClass from './utils/UtilClass.js';
-import validator from 'validator';
 
 export default class Trainer extends UtilClass {
   constructor(params) {
