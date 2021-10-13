@@ -9,10 +9,10 @@ const schoolOptions = {
   assignments: [],
 };
 
-const seeder = (array, Model, array2) => {
-  array.forEach((item) => {
+const seeder = (DATAarray, Model, optionsArray) => {
+  DATAarray.forEach((item) => {
     const modeledItem = new Model(item);
-    array2.push(modeledItem);
+    optionsArray.push(modeledItem);
   });
 };
 
