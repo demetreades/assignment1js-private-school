@@ -1,0 +1,23 @@
+{
+  "name": "assignment-1-private-school",
+  "version": "1.0.0",
+  "description": "Assignment 1 , PeopleCert Coding Bootcamp",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "live-server",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "quorum",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
