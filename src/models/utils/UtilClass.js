@@ -1,9 +1,4 @@
 export default class UtilClass {
-  // constructor(createdAt, updatedAt) {
-  //   this.createdAt = new Date();
-  //   this.updatedAt = null;
-  // }
-
   properCase = (value) => {
     return value.charAt(0).toUpperCase() + value.substr(1).toLowerCase();
   };
@@ -13,23 +8,27 @@ export default class UtilClass {
   };
 
   add = (array, itemToAdd) => {
-    console.log(itemToAdd);
-    this[array].push({
-      id: itemToAdd.id,
-      fullName: itemToAdd.getFullName(),
-      isActive: true,
-      addedAt: new Date(),
-    });
-    console.log(`${itemToAdd}: with id: ${itemToAdd.id} added to`);
+    this[array].push(
+      Object.assign(itemToAdd, {
+        isActive: true,
+        addedAt: new Date(),
+      })
+    );
+    console.log(`[ADD] ${itemToAdd.getFullName()} to ${this.getFullName()}`);
   };
 
   remove(array, itemToRemove) {
     this[array] = this[array].filter((item) => item.id !== itemToRemove.id);
+    console.log(
+      `[REMOVE] ${itemToRemove.getFullName()} to ${this.getFullName()}`
+    );
   }
 
-  list = (array, text) => {
-    console.log(`${text ?? 'Array'}: \n`, this[array]);
-    console.log(`${text ?? 'Number of items'} : ${this[array].length}`);
+  getAll = (array, text) => {
+    this[array].forEach((item) => {
+      console.log(item.toConsoleString());
+    });
+    console.log(`${this.properCase(array)} count: ${this[array].length}\n`);
   };
 
   getThis = () => {
