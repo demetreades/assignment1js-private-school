@@ -18,10 +18,14 @@ export default class Assignment {
   }
 
   getFullName = () => {
-    return `${this.title} ${this.description}`;
+    return `${this.title}`;
   };
 
   setSubDateTime() {
     this.subDateTime = this.dateUtil('2021');
+  }
+
+  toConsoleString() {
+    return `Assignment: ${this.getFullName()}`;
   }
 }

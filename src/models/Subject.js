@@ -12,6 +12,10 @@ export default class Subject {
   }
 
   getFullName = () => {
-    return `Subject: ${this.title}`;
+    return `${this.title}`;
   };
+
+  toConsoleString() {
+    return `Subject: ${this.getFullName()}`;
+  }
 }

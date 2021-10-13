@@ -12,6 +12,7 @@ export default class Course extends UtilClass {
     this.ends = null;
     this.students = params.students ?? [];
     this.trainers = params.trainers ?? [];
+    this.assignments = params.assignments ?? [];
     this.subjects = params.subjects ?? [];
     this.createdAt = new Date();
     this.updatedAt = null;
@@ -28,4 +29,8 @@ export default class Course extends UtilClass {
   getFullName = () => {
     return `${this.title} ${this.type} ${this.stream}`;
   };
+
+  toConsoleString() {
+    return `Course: ${this.getFullName()}`;
+  }
 }

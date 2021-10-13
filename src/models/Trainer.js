@@ -1,5 +1,6 @@
 import { v4 as uuid } from 'uuid';
 import UtilClass from './utils/UtilClass.js';
+import validator from 'validator';
 
 export default class Trainer extends UtilClass {
   constructor(params) {
@@ -9,8 +10,8 @@ export default class Trainer extends UtilClass {
     this.lastName = this.properCase(params.lastName);
     this.email = params.email;
     this.dateOfBirth = params.dateOfBirth;
-    this.courses = params.courses ?? [];
     this.subjects = params.subjects ?? [];
+    this.courses = params.courses ?? [];
     this.createdAt = new Date();
     this.updatedAt = null;
   }
@@ -37,4 +38,10 @@ export default class Trainer extends UtilClass {
       },
     });
   }
+
+  toConsoleString = () => {
+    return `Trainer: ${this.getFullName()}, course:${
+      this.courses ?? 'Not in a course yet,'
+    }, email: ${this.email}`;
+  };
 }
