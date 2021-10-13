@@ -21,7 +21,7 @@ export default class Student extends UtilClass {
   };
 
   toConsoleString = () => {
-    return `Student: ${this.getFullName()}, email: ${this.email}, dob: ${
+    return `Student: ${this.getFullName()}, email: ${this.email}, birthdate: ${
       this.dateOfBirth
     }`;
   };
