@@ -1,5 +1,4 @@
-import { privateSchool } from '../src/models/index.js';
-import DateUtil from '../src/models/utils/DateUtil.js';
+import privateSchool from './models/School.js';
 
 const {
   students: [student1, student2, student3, student4],
@@ -18,7 +17,7 @@ const {
 // /////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////
 
-console.log(`\n\n[PROGRAM] =========== ============ START \n`);
+console.log('\n\n[PROGRAM] =========== ============ START \n');
 
 // Init Course JS ///////////////////////////////////////////
 
@@ -33,6 +32,7 @@ courseJS.add('subjects', subject4);
 courseJS.add('students', student1);
 courseJS.add('students', student2);
 courseJS.add('students', student3);
+courseJS.add('students', student4);
 // add trainers to course
 courseJS.add('trainers', trainer1);
 courseJS.add('trainers', trainer2);
@@ -43,7 +43,7 @@ courseJS.add('assignments', assignment2);
 courseJS.add('assignments', assignment3);
 courseJS.add('assignments', assignment4);
 // remove students
-courseJS.remove('students', student1);
+// courseJS.remove('students', student1);
 // courseJS.remove('students', student2);
 // courseJS.remove('students', student3);
 
@@ -57,22 +57,26 @@ student1.submitAssignment(assignment1);
 student1.submitAssignment(assignment3);
 
 // Trainer /////////////////////////////////////////////
+// add trainers to courseJS
+trainer1.add('courses', courseJS);
+trainer2.add('courses', courseJS);
+trainer3.add('courses', courseJS);
+
+// add to trainer1 subjects
 trainer1.add('subjects', subject1);
 trainer1.add('subjects', subject2);
 trainer1.add('subjects', subject3);
 trainer1.add('subjects', subject4);
-// trainer1.getAll('subjects', `Subject of trainer`);
 
 trainer1.giveMarks(student1, 0, 70, 80);
 trainer1.giveMarks(student1, 1, 55, 60);
 
-student1.getAll('assignments', 'Marked Assignments');
+student1.getAll('assignments');
 
-// courseJS.getAll('students', 'Course JS Students: ');
 courseJS.getAll('trainers');
-courseJS.getAll('students');
 courseJS.getAll('assignments');
+courseJS.getAll('students');
 
 // /////////////////////////////////////////////////////
 
-console.log(`\n[PROGRAM] ============ ============ ENDS \n\n`);
+console.log('\n[PROGRAM] ============ ============ ENDS \n\n');
