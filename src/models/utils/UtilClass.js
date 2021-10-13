@@ -32,11 +32,6 @@ export default class UtilClass {
     console.log(`${text ?? 'Number of items'} : ${this[array].length}`);
   };
 
-  consoleList = (array, text) => {
-    console.log(`${text ?? 'Array'}: \n`, this[array]);
-    console.log(`${text ?? 'Number of items'} : ${this[array].length}`);
-  };
-
   getThis = () => {
     return this;
   };
