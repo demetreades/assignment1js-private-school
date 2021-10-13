@@ -67,28 +67,28 @@ export default {
   courses: [
     {
       title: 'CB13',
-      type: 'full time',
+      type: 'Full-time',
       stream: 'JAVA',
       starts: null,
       ends: null,
     },
     {
       title: 'CB13',
-      type: 'full time',
+      type: 'Full-time',
       stream: 'Python',
       starts: null,
       ends: null,
     },
     {
       title: 'CB13',
-      type: 'full time',
+      type: 'Part-time',
       stream: 'JavaScript',
       starts: null,
       ends: null,
     },
     {
       title: 'CB13',
-      type: 'full time',
+      type: 'Part-time',
       stream: 'C#',
       starts: new Date(),
       ends: new Date(),
@@ -122,19 +122,19 @@ export default {
   ],
   assignments: [
     {
-      title: 'assignment 1: Private School frontend',
+      title: 'Private School frontend',
       description: 'Implement 5 pages of the private school',
     },
     {
-      title: 'assignment 2: Private School backend',
+      title: 'Private School backend',
       description: 'Implement 5 pages of the private school',
     },
     {
-      title: 'assignment 3: Private School database',
+      title: 'Private School database',
       description: 'Implement DML and DDL of private school',
     },
     {
-      title: 'assignment 4: Hotel rental page',
+      title: 'Hotel rental page',
       description: 'Implement landing page of a rental website',
     },
     {
