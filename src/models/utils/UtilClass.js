@@ -24,11 +24,12 @@ export default class UtilClass {
     );
   }
 
-  getAll = (array, text) => {
-    this[array].forEach((item) => {
-      console.log(item.toConsoleString());
+  getAll = (array, i = 1) => {
+    console.log(`\n[LIST] ${this.getFullName()}, ${this.properCase(array)}`);
+    this[array].forEach((item, index) => {
+      console.log(`${++index}# ${item.toConsoleString()}`);
     });
-    console.log(`${this.properCase(array)} count: ${this[array].length}\n`);
+    console.log(`${this.properCase(array)} count: ( ${this[array].length} )`);
   };
 
   getThis = () => {
