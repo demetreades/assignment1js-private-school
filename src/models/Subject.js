@@ -11,9 +11,9 @@ export default class Subject {
     this.updatedAt = null;
   }
 
-  getFullName = () => {
+  getFullName() {
     return `${this.title}`;
-  };
+  }
 
   toConsoleString() {
     return `Subject: ${this.getFullName()}`;

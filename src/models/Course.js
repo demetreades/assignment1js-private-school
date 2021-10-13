@@ -26,9 +26,9 @@ export default class Course extends UtilClass {
     this.ends = new Date(date);
   }
 
-  getFullName = () => {
+  getFullName() {
     return `${this.title} ${this.type} ${this.stream}`;
-  };
+  }
 
   toConsoleString() {
     return `Course: ${this.getFullName()}`;
