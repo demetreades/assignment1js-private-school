@@ -28,8 +28,4 @@ export default class Course extends UtilClass {
   getFullName = () => {
     return `${this.title} ${this.type} ${this.stream}`;
   };
-
-  assignSubject = () => {
-    this.subjects.filter((subject) => {});
-  };
 }
