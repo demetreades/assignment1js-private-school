@@ -17,15 +17,17 @@ export default class Assignment {
     return new Date(date);
   }
 
-  getFullName = () => {
+  getFullName() {
     return `${this.title}`;
-  };
+  }
 
   setSubDateTime() {
     this.subDateTime = this.dateUtil('2021');
   }
 
   toConsoleString() {
-    return `Assignment: ${this.getFullName()}`;
+    return `Assignment: ${this.getFullName()}, total marks: ${
+      this.totalMarks ?? 'No marks yet'
+    }`;
   }
 }

@@ -15,13 +15,13 @@ export default class Trainer extends UtilClass {
     this.updatedAt = null;
   }
 
-  getFullName = () => {
+  getFullName() {
     return `${this.lastName} ${this.firstName}`;
-  };
+  }
 
-  calcTotalMarks = (oralMark, assignmentMark) => {
+  calcTotalMarks(oralMark, assignmentMark) {
     return (oralMark * 40 + assignmentMark * 60) / (40 + 60);
-  };
+  }
 
   giveMarks(student, assignmentIndex, oralMarks, assignmentMarks) {
     const assignment = student.assignments[assignmentIndex];
@@ -38,9 +38,9 @@ export default class Trainer extends UtilClass {
     });
   }
 
-  toConsoleString = () => {
-    return `Trainer: ${this.getFullName()}, course:${
-      this.courses ?? 'Not in a course yet,'
-    }, email: ${this.email}`;
-  };
+  toConsoleString() {
+    return `Trainer: ${this.getFullName()}, email: ${this.email} ${
+      this.courses[0] ? this.courses[0].getFullName() : 'Not in a course'
+    }`;
+  }
 }

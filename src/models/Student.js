@@ -16,15 +16,15 @@ export default class Student extends UtilClass {
     this.updatedAt = null;
   }
 
-  getFullName = () => {
+  getFullName() {
     return `${this.lastName} ${this.firstName}`;
-  };
+  }
 
-  toConsoleString = () => {
-    return `Student: ${this.getFullName()}, email: ${this.email}, birthdate: ${
-      this.dateOfBirth
+  toConsoleString() {
+    return `Student: ${this.getFullName()}, email: ${this.email}, course: ${
+      this.courses[0] ? this.courses[0].getFullName() : 'Not in a course'
     }`;
-  };
+  }
 
   submitAssignment(assignment) {
     return Object.assign(assignment, {
