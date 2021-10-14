@@ -1,9 +1,13 @@
 {
-  "name": "assignment-1-private-school",
-  "version": "1.0.0",
-  "description": "Assignment 1 , PeopleCert Coding Bootcamp",
+  "name": "assignment1js-private-school",
+  "version": "0.2.0",
+  "description": "Assignment1js private school structure implementation that can have multiple courses, students, trainers and assignments",
   "main": "src/app.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demetreades/assingment1js-private-school.git"
+  },
   "scripts": {
     "start": "live-server",
     "dev": "nodemon src/app.js",
@@ -11,6 +15,7 @@
     "lint:fix": "eslint . --fix"
   },
   "keywords": [
+    "assignment-solution",
     "js"
   ],
   "author": "quorum",
@@ -25,5 +30,9 @@
   "dependencies": {
     "email-validator": "^2.0.4",
     "uuid": "^8.3.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/demetreades/assingment1js-private-school/issues"
+  },
+  "homepage": "https://github.com/demetreades/assingment1js-private-school#readme"
 }
