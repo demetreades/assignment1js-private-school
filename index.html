@@ -13,6 +13,26 @@
       <p id="list"></p>
     </div>
 
-    <!-- <script type="module" src="app.js" defer></script> -->
+    <script type="module" src="./src/app.js"></script>
+    <script type="module">
+      import privateSchool from './src/models/School.js';
+      console.log(privateSchool);
+
+      function getList(array, index) {
+        const list = document.querySelector('#list');
+        array.forEach((item) => {
+          const newP = document.createElement('p');
+          const newSpan = document.createElement('span');
+          list.appendChild(newP);
+          newP.append(item.toConsoleString());
+        });
+      }
+
+      getList(privateSchool.students);
+      getList(privateSchool.trainers);
+      getList(privateSchool.courses);
+      getList(privateSchool.assignments);
+      getList(privateSchool.subjects);
+    </script>
   </body>
 </html>
