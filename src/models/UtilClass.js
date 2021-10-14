@@ -1,13 +1,13 @@
 export default class UtilClass {
-  properCase = (value) => {
+  properCase(value) {
     return value.charAt(0).toUpperCase() + value.substr(1).toLowerCase();
-  };
+  }
 
-  update = (props) => {
+  update(props) {
     // update logic
-  };
+  }
 
-  add = (array, itemToAdd) => {
+  add(array, itemToAdd) {
     this[array].push(
       Object.assign(itemToAdd, {
         isActive: true,
@@ -15,7 +15,7 @@ export default class UtilClass {
       })
     );
     console.log(`[ADD] ${itemToAdd.getFullName()} to ${this.getFullName()}`);
-  };
+  }
 
   remove(array, itemToRemove) {
     this[array] = this[array].filter((item) => item.id !== itemToRemove.id);
@@ -24,15 +24,11 @@ export default class UtilClass {
     );
   }
 
-  getAll = (array, i = 1) => {
+  getAll(array) {
     console.log(`\n[LIST] ${this.getFullName()}, ${this.properCase(array)}`);
     this[array].forEach((item, index) => {
       console.log(`${++index}# ${item.toConsoleString()}`);
     });
     console.log(`${this.properCase(array)} count: ( ${this[array].length} )`);
-  };
-
-  getThis = () => {
-    return this;
-  };
+  }
 }
