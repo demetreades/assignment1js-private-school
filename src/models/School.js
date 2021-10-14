@@ -5,26 +5,21 @@ import Course from './Course.js';
 import Assignment from './Assignment.js';
 import Subject from './Subject.js';
 
-const schoolOptions = {
-  courses: [],
-  students: [],
-  trainers: [],
-  subjects: [],
-  assignments: [],
-};
-
-const seeder = (DATAarray, Model, optionsArray) => {
+const seeder = (DATAarray, Model, optionsArray = []) => {
   DATAarray.forEach((item) => {
     const modeledItem = new Model(item);
     optionsArray.push(modeledItem);
   });
+  return optionsArray;
 };
 
-seeder(DATA.students, Student, schoolOptions.students);
-seeder(DATA.trainers, Trainer, schoolOptions.trainers);
-seeder(DATA.courses, Course, schoolOptions.courses);
-seeder(DATA.subjects, Subject, schoolOptions.subjects);
-seeder(DATA.assignments, Assignment, schoolOptions.assignments);
+const schoolOptions = {
+  courses: seeder(DATA.courses, Course),
+  students: seeder(DATA.students, Student),
+  trainers: seeder(DATA.trainers, Trainer),
+  subjects: seeder(DATA.subjects, Subject),
+  assignments: seeder(DATA.assignments, Assignment),
+};
 
 // console.log(schoolOptions);
 
