@@ -1,4 +1,6 @@
-# Assignment 1
+# Assignment1js
+
+<br>
 
 Do the implementation of a private school structure.
 This private school supports multiple courses.
@@ -26,3 +28,24 @@ Your program must be able to add / edit / update / remove and output results on 
 - Subjects per Trainer per Course
 
 - Assignments per Student per Course
+
+<br>
+
+## Setup
+
+Clone
+
+    git clone https://github.com/demetreades/assignment1js-private-school.git
+
+Install dependencies
+
+    npm i
+
+To start browser development server [link](http://localhost:8080),
+PORT: `8080`
+
+    npm start
+
+To start with node
+
+    npm run dev
