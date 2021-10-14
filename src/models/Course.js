@@ -1,10 +1,10 @@
-import { v4 as uuid } from 'uuid';
-import UtilClass from './utils/UtilClass.js';
+// import { v4 as uuid } from 'uuid';
+import UtilClass from './UtilClass.js';
 
 export default class Course extends UtilClass {
   constructor(params) {
     super();
-    this.id = uuid();
+    // this.id = uuid();
     this.title = params.title;
     this.type = params.type;
     this.stream = params.stream;

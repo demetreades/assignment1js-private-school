@@ -1,10 +1,10 @@
-import { v4 as uuid } from 'uuid';
-import UtilClass from './utils/UtilClass.js';
+// import { v4 as uuid } from 'uuid/v4';
+import UtilClass from './UtilClass.js';
 
 export default class Trainer extends UtilClass {
   constructor(params) {
     super();
-    this.id = uuid();
+    // this.id = uuid();
     this.firstName = this.properCase(params.firstName);
     this.lastName = this.properCase(params.lastName);
     this.email = params.email;
@@ -39,7 +39,7 @@ export default class Trainer extends UtilClass {
   }
 
   toConsoleString() {
-    return `Trainer: ${this.getFullName()}, email: ${this.email} ${
+    return `Trainer: ${this.getFullName()}, email: ${this.email}, course: ${
       this.courses[0] ? this.courses[0].getFullName() : 'Not in a course'
     }`;
   }

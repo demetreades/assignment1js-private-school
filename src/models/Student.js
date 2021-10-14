@@ -1,10 +1,10 @@
-import { v4 as uuid } from 'uuid';
-import UtilClass from './utils/UtilClass.js';
+// import { v4 as uuid } from 'uuid';
+import UtilClass from './UtilClass.js';
 
 export default class Student extends UtilClass {
   constructor(params) {
     super();
-    this.id = uuid();
+    // this.id = uuid();
     this.firstName = this.properCase(params.firstName);
     this.lastName = this.properCase(params.lastName);
     this.email = params.email;

@@ -1,8 +1,8 @@
-import { v4 as uuid } from 'uuid';
+// import { v4 as uuid } from 'uuid';
 
 export default class Assignment {
   constructor(params) {
-    this.id = uuid();
+    // this.id = uuid();
     this.title = params.title;
     this.description = params.description;
     this.subDateTime = null;
@@ -29,5 +29,9 @@ export default class Assignment {
     return `Assignment: ${this.getFullName()}, total marks: ${
       this.totalMarks ?? 'No marks yet'
     }`;
+  }
+
+  getThis() {
+    return this;
   }
 }
